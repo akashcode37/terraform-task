@@ -114,7 +114,7 @@ resource "aws_route_table_association" "association2" {
 resource "aws_instance" "instances" {
   count         = "2"
   ami           = var.ami
-  instance_type = "t2.micro"
+  instance_type = var.in_type
   subnet_id = aws_subnet.private-subnet.id
   tags = {
     Name = "Instance ${count.index}"

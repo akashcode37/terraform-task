@@ -4,3 +4,6 @@ variable "aws_region" {
 variable "ami" {
 	type = string
 }
+variable "in_type" {
+	type = string
+}
